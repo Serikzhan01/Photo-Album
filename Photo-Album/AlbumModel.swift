@@ -21,11 +21,11 @@ extension AlbumModel {
          AlbumModel(title: "Telegram", imageCount: 5, image: "cat"),
          AlbumModel(title: "Instagram", imageCount: 6, image: "cat")
         ],
-        [AlbumModel(title: "Sokol", imageCount: nil, image: "cat"),
-         AlbumModel(title: "Kolsay", imageCount: nil, image: "cat"),
-         AlbumModel(title: "Burabai", imageCount: nil, image: "cat"),
-         AlbumModel(title: "Family", imageCount: nil, image: "cat"),
-         AlbumModel(title: "Other", imageCount: nil, image: "cat")
+        [AlbumModel(title: "Sokol", imageCount: nil, image: "secondCat"),
+         AlbumModel(title: "Kolsay", imageCount: nil, image: "secondCat"),
+         AlbumModel(title: "Burabai", imageCount: nil, image: "secondCat"),
+         AlbumModel(title: "Family", imageCount: nil, image: "secondCat"),
+         AlbumModel(title: "Other", imageCount: nil, image: "secondCat")
         ],
         [AlbumModel(title: nil, imageCount: nil, image: "cat"),
          AlbumModel(title: nil, imageCount: nil, image: "cat"),
