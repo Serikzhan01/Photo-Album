@@ -41,8 +41,7 @@ class AlbumCellHeader: UICollectionReusableView {
     
     private func setupLayout() {
         title.snp.makeConstraints { make in
-            make.bottom.equalTo(self)
-            make.left.equalTo(self)
+            make.bottom.leading.equalTo(self)
         }
     }
     

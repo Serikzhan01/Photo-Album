@@ -21,7 +21,7 @@ class TapBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.backgroundColor = .black
         tabBar.selectedImageTintColor = .systemBlue
     }
-    
+
     func setupTapBarViewControllers() {
         let first = MediaLibraryTabBarViewController()
         let firstIcon = UITabBarItem(title: "Медиатека",
