@@ -28,6 +28,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         super.viewDidLoad()
         setupHierarchy()
         setupLayout()
+        setupNavbar()
     }
     
     // MARK: - Setup
@@ -48,6 +49,13 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
             make.top.equalTo(view)
             make.left.bottom.right.equalTo(view)
         }
+    }
+    func setupNavbar() {
+        navigationItem.setLeftBarButton(UIBarButtonItem(
+                    title: nil,
+                    image: UIImage(systemName: "plus"),
+                    primaryAction: UIAction(handler: {_ in self.dismiss(animated: true)}),
+                    menu: nil), animated: true)
     }
     
     @objc

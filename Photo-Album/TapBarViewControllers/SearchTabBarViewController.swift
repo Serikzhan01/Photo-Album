@@ -11,6 +11,7 @@ class SearchTabBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Поиск"
         view.backgroundColor = .black
     }
 }

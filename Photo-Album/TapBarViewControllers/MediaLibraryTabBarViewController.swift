@@ -11,6 +11,7 @@ class MediaLibraryTabBarViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Медиатека"
         view.backgroundColor = .black
     }
 }

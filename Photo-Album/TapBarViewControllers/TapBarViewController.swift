@@ -35,7 +35,7 @@ class TapBarController: UITabBarController, UITabBarControllerDelegate {
                                      selectedImage: UIImage(systemName: "heart.text.square"))
         second.tabBarItem = secondIcon
         
-        let third = AlbumViewController()
+        let third = UINavigationController(rootViewController: AlbumViewController())
         let thirdIcon = UITabBarItem(title: "Альбомы",
                                      image: UIImage(systemName: "rectangle.stack.fill"),
                                      selectedImage: UIImage(systemName: "rectangle.stack.fill"))
