@@ -75,7 +75,7 @@
 				8CAD360E29C1FA4200886AA6 /* AlbumViewController.swift */,
 				8CAD362C29C210FA00886AA6 /* AlbumModel.swift */,
 				8CAD362829C2092A00886AA6 /* Cells */,
-				8CAD362B29C20AB700886AA6 /* TapBarControllers */,
+				8CAD362B29C20AB700886AA6 /* TapBarViewControllers */,
 			);
 			path = "Photo-Album";
 			sourceTree = "<group>";
@@ -132,7 +132,7 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
-		8CAD362B29C20AB700886AA6 /* TapBarControllers */ = {
+		8CAD362B29C20AB700886AA6 /* TapBarViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				8CAD363029C2353E00886AA6 /* TapBarViewController.swift */,
@@ -140,7 +140,7 @@
 				8CAD363429C2368B00886AA6 /* ForYouTabBarViewController.swift */,
 				8CAD363829C236E300886AA6 /* SearchTabBarViewController.swift */,
 			);
-			path = TapBarControllers;
+			path = TapBarViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

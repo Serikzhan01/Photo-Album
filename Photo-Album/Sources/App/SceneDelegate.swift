@@ -15,8 +15,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        let viewController = TapBarController()
-        let navigationController = UINavigationController(rootViewController: viewController)
+        let viewController = AlbumViewController()
+        let navigationController = UINavigationController(rootViewController: TapBarController())
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()
     }

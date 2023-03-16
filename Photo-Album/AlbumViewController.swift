@@ -28,14 +28,19 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         super.viewDidLoad()
         setupHierarchy()
         setupLayout()
+        setupNavbar()
     }
     
     // MARK: - Setup
     
     private func setupHierarchy() {
-        view.backgroundColor = .black
+        view.backgroundColor = .white
         navigationController?.navigationBar.prefersLargeTitles = true
         title = "Альбомы"
+        navigationController?.navigationItem.leftBarButtonItem = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(albumNavigationLeftButtonTapped))
+        
+        navigationController?.navigationItem.leftBarButtonItem?.tintColor = .white
+        
         view.addSubview(collectionView)
     }
     
@@ -44,6 +49,18 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
             make.top.equalTo(view)
             make.left.bottom.right.equalTo(view)
         }
+    }
+    func setupNavbar() {
+        navigationItem.setLeftBarButton(UIBarButtonItem(
+                    title: nil,
+                    image: UIImage(systemName: "plus"),
+                    primaryAction: UIAction(handler: {_ in self.dismiss(animated: true)}),
+                    menu: nil), animated: true)
+    }
+    
+    @objc
+    func albumNavigationLeftButtonTapped(){
+        print("Album navigation left button tapped")
     }
     
     private func createLayout() -> UICollectionViewCompositionalLayout {
@@ -72,7 +89,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
                     top: 5, leading: 5, bottom: 30, trailing: 5)
                 
                 let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
-                layoutSection.orthogonalScrollingBehavior = .continuous
+                layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
                 let layoutSectionHeaderSize = NSCollectionLayoutSize(
                     widthDimension: .fractionalWidth(0.93),
@@ -109,11 +126,21 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
                 layoutGroup.contentInsets = NSDirectionalEdgeInsets(
                     top: 5, leading: 5, bottom: 30, trailing: 5)
                 
-                let sectionLayout = NSCollectionLayoutSection(group: layoutGroup)
+                let layoutSection = NSCollectionLayoutSection(group: layoutGroup)
+                layoutSection.orthogonalScrollingBehavior = .groupPaging
                 
-                sectionLayout.orthogonalScrollingBehavior = .groupPaging
+                let layoutSectionHeaderSize = NSCollectionLayoutSize(
+                    widthDimension: .fractionalWidth(0.93),
+                    heightDimension: .estimated(50))
                 
-                return sectionLayout
+                let layoutSectionHeader = NSCollectionLayoutBoundarySupplementaryItem(
+                    layoutSize: layoutSectionHeaderSize,
+                    elementKind: UICollectionView.elementKindSectionHeader,
+                    alignment: .top)
+                
+                layoutSection.boundarySupplementaryItems = [layoutSectionHeader]
+
+                return layoutSection
                 
             case 2:
                 let itemSize = NSCollectionLayoutSize(
@@ -218,11 +245,11 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
         
         
         switch indexPath.section {
-        case 1:
+        case 0:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: AlbumCellHeader.identifier, for: indexPath) as! AlbumCellHeader
             header.title.text = "Мои альбомы"
             return header
-        case 2:
+        case 1:
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: AlbumCellHeader.identifier, for: indexPath) as! AlbumCellHeader
             header.title.text = "Общие альбомы"
             return header
@@ -230,7 +257,7 @@ class AlbumViewController: UIViewController, UICollectionViewDataSource, UIColle
 //            let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: "header", for: indexPath)
 //            return header
             let header = collectionView.dequeueReusableSupplementaryView(ofKind: kind, withReuseIdentifier: AlbumCellHeader.identifier, for: indexPath) as! AlbumCellHeader
-            header.title.text = "Общие альбомы"
+            header.title.text = "Альбомы"
             return header
         }
     }
