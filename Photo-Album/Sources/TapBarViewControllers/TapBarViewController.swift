@@ -21,7 +21,7 @@ class TapBarController: UITabBarController, UITabBarControllerDelegate {
         tabBar.backgroundColor = .black
         tabBar.selectedImageTintColor = .systemBlue
     }
-
+    
     func setupTapBarViewControllers() {
         let first = MediaLibraryTabBarViewController()
         let firstIcon = UITabBarItem(title: "Медиатека",
@@ -31,8 +31,8 @@ class TapBarController: UITabBarController, UITabBarControllerDelegate {
         
         let second = ForYouTabBarViewController()
         let secondIcon = UITabBarItem(title: "Для вас",
-                                     image: UIImage(systemName: "heart.text.square"),
-                                     selectedImage: UIImage(systemName: "heart.text.square"))
+                                      image: UIImage(systemName: "heart.text.square"),
+                                      selectedImage: UIImage(systemName: "heart.text.square"))
         second.tabBarItem = secondIcon
         
         let third = UINavigationController(rootViewController: AlbumViewController())
@@ -43,8 +43,8 @@ class TapBarController: UITabBarController, UITabBarControllerDelegate {
         
         let fourth = SearchTabBarViewController()
         let fourthIcon = UITabBarItem(title: "Поиск",
-                                     image: UIImage(systemName: "magnifyingglass"),
-                                     selectedImage: UIImage(systemName: "magnifyingglass"))
+                                      image: UIImage(systemName: "magnifyingglass"),
+                                      selectedImage: UIImage(systemName: "magnifyingglass"))
         fourth.tabBarItem = fourthIcon
         
         let controllers = [first, second, third, fourth]
