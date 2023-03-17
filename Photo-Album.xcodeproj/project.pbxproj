@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8C0D81E329C3967200FEDD1D /* MediaFilesCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C0D81E229C3967200FEDD1D /* MediaFilesCell.swift */; };
 		8CAD360B29C1FA4200886AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD360A29C1FA4200886AA6 /* AppDelegate.swift */; };
 		8CAD360D29C1FA4200886AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD360C29C1FA4200886AA6 /* SceneDelegate.swift */; };
 		8CAD360F29C1FA4200886AA6 /* AlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CAD360E29C1FA4200886AA6 /* AlbumViewController.swift */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8C0D81E229C3967200FEDD1D /* MediaFilesCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MediaFilesCell.swift; sourceTree = "<group>"; };
 		8CAD360729C1FA4200886AA6 /* Photo-Album.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Photo-Album.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CAD360A29C1FA4200886AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8CAD360C29C1FA4200886AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -72,10 +74,6 @@
 			children = (
 				8CAD361F29C1FA5D00886AA6 /* Resources */,
 				8CAD361E29C1FA5000886AA6 /* Sources */,
-				8CAD360E29C1FA4200886AA6 /* AlbumViewController.swift */,
-				8CAD362C29C210FA00886AA6 /* AlbumModel.swift */,
-				8CAD362829C2092A00886AA6 /* Cells */,
-				8CAD362B29C20AB700886AA6 /* TapBarViewControllers */,
 			);
 			path = "Photo-Album";
 			sourceTree = "<group>";
@@ -83,6 +81,9 @@
 		8CAD361E29C1FA5000886AA6 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8CAD362C29C210FA00886AA6 /* AlbumModel.swift */,
+				8CAD362829C2092A00886AA6 /* Cells */,
+				8CAD362B29C20AB700886AA6 /* TapBarViewControllers */,
 				8CAD362229C1FAAB00886AA6 /* App */,
 				8CAD362129C1FA9C00886AA6 /* Storyboard */,
 			);
@@ -128,6 +129,7 @@
 			children = (
 				8CAD362629C2089700886AA6 /* AlbumsCollectionViewCell.swift */,
 				8CAD362E29C22A9300886AA6 /* AlbumCellHeader.swift */,
+				8C0D81E229C3967200FEDD1D /* MediaFilesCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -135,6 +137,7 @@
 		8CAD362B29C20AB700886AA6 /* TapBarViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8CAD360E29C1FA4200886AA6 /* AlbumViewController.swift */,
 				8CAD363029C2353E00886AA6 /* TapBarViewController.swift */,
 				8CAD363229C2357200886AA6 /* MediaLibraryTabBarViewController.swift */,
 				8CAD363429C2368B00886AA6 /* ForYouTabBarViewController.swift */,
@@ -229,6 +232,7 @@
 				8CAD363929C236E300886AA6 /* SearchTabBarViewController.swift in Sources */,
 				8CAD360B29C1FA4200886AA6 /* AppDelegate.swift in Sources */,
 				8CAD360D29C1FA4200886AA6 /* SceneDelegate.swift in Sources */,
+				8C0D81E329C3967200FEDD1D /* MediaFilesCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
